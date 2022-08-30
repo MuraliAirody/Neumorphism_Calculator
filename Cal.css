@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+  
+    background-color:#e6ecf1;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+}
+.calculator{
+    background-color: #ecf0f3;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: inset 5px 5px 12px #ffffff,
+                       5px 5px 15px rgb(0,0,0,0.16);
+
+    display: grid;
+    grid-template-columns:repeat(4,100px) ;  
+
+    grid-gap: 10px;
+                     
+}
+#output{
+    border: none;
+    height: 80px;
+    width: 350px;
+    background-color: #ecf0f3;
+    border-radius: 30px;
+    box-shadow: inset -5px -5px 12px #ffffff,
+                 inset 2px 2px 12px rgb(0,0,0,0.16);
+    grid-column: 1/5;
+
+    color: gray;
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+button{
+    height: 40px;
+    width: 50px;
+    background-color: #ecf0f3;
+    box-shadow: inset -5px -5px 12px #ffffff,
+    inset 2px 2px 12px rgb(0,0,0,0.16); 
+    border:none;
+    border-radius: 30px;
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* here I use order and grid area to span/re-arrange the keys to proper possition
+you can reduce this step by placing buttons in a order in a HTML page. */
+
+
+#clear{
+    order:0;
+}
+#del{
+    order: 0;
+}
+#i-0{
+    order: 19;
+}
+#i-dot{
+    grid-area: 6/1/7/2;
+}
+#i-1{
+    grid-area: 5/3/6/4;
+}
+#i-2{
+    grid-area: 5/2/6/3;
+}
+#i-3{
+    grid-area: 5/1/6/2;
+}
+#i-4{
+    grid-area: 4/3/5/4;
+}
+#i-5{
+    grid-area: 4/2/5/3;
+}
+#i-6{
+    grid-area: 4/1/5/2;
+}
+#i-7{
+    grid-area: 3/3/4/4;
+}
+#i-8{
+    grid-area: 3/2/4/3;
+}
+#i-9{
+    grid-area: 3/1/4/2;
+}
+#i-eq{
+    grid-area: 5/4/7/5;
+    height: 100px;
+    width: 80px;
+    background-color: #ecf0f3;
+    border-radius: 30px;
+    box-shadow: inset -5px -5px 12px #ffffff,
+                 inset 2px 2px 12px rgb(0,0,0,0.16);
+}
